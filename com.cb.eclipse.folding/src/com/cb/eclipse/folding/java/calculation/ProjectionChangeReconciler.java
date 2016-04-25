@@ -263,18 +263,17 @@ public class ProjectionChangeReconciler {
 	 *            normalize.
 	 */
 	private void filterAndNormalizePositions(Map positionMap) throws BadLocationException {
-
-		Iterator positions = positionMap.entrySet().iterator();
-		while (positions.hasNext()) {
-			Map.Entry entry = (Map.Entry) positions.next();
-			EnhancedPosition pos = (EnhancedPosition) entry.getValue();
-
-			normalizePosition(pos);
-			
+		if(positionMap != null) {
+			Iterator positions = positionMap.entrySet().iterator();
+			while (positions.hasNext()) {
+				Map.Entry entry = (Map.Entry) positions.next();
+				EnhancedPosition pos = (EnhancedPosition) entry.getValue();
+				
+				normalizePosition(pos);
+				
+			}
+			applyFilters(positionMap);
 		}
-		applyFilters(positionMap);
-		
-
 	}
 
 	private void applyFilters(Map positionMap) throws BadLocationException {
