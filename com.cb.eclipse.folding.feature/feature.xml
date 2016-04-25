@@ -2,7 +2,7 @@
 <feature
       id="com.cb.eclipse.folding"
       label="Coffee Bytes Code Folding"
-      version="1.0.5.a"
+      version="1.0.6"
       provider-name="Coffee-Bytes"
       primary="true">
 
@@ -51,6 +51,6 @@ this feature is licensed.
          id="com.cb.eclipse.folding"
          download-size="0"
          install-size="0"
-         version="1.0.5.a"/>
+         version="1.0.6"/>
 
 </feature>
